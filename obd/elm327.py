@@ -549,6 +549,7 @@ class ELM327:
 
             # end on specified end-marker sequence
             if end_marker in buffer:
+            # if self.ELM_PROMPT in buffer or ((self.ELM_LP_ACTIVE in buffer) and (b"BUS INIT: OK\r" not in buffer)):
                 break
 
         # log, and remove the "bytearray(   ...   )" part
